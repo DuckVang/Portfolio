@@ -1,7 +1,6 @@
-import styles from "./page.module.scss";
-import helpers from "../styles/helpers.module.scss";
+import styles from "../page.module.scss";
+import helpers from "../../styles/helpers.module.scss";
 import Link from "next/link";
-import CanvasAnimation from "@/components/Three-Animation";
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -32,7 +31,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.right}>
-          <CanvasAnimation />
+          {/* <CanvasAnimation></CanvasAnimation> */}
         </div>
       </div>
     </main>

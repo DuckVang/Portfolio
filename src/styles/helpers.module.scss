@@ -1,0 +1,22 @@
+.no_display {
+    display: none;
+}
+.comment {
+    color: grey;
+    &::before {
+        content: "// ";
+    }
+}
+.variable {
+    color: purple;
+}
+.variable_name {
+    color: green;
+}
+.string {
+    color: orange;
+    &::after,
+    &::before {
+        content: '"';
+    }
+}

@@ -1,0 +1,43 @@
+@use "variables.module" as variables;
+@import "./reset.scss";
+// @font-face {
+//     font-family: "FiraCode" !important;
+//     /* font-style: normal;
+//     font-weight: 600;
+//     font-size: xx-large; */
+
+// }
+:root {
+    background-color: variables.$color-primary;
+    /* color-scheme: var(--color-1); */
+}
+* {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box;
+
+    /* background-color: rgba(100,20,50,0.1); */
+}
+
+html {
+}
+body {
+    background-color: variables.$color-primary;
+    color: variables.$text-unfocused;
+}
+html,
+body {
+    overflow: hidden;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.wrapper {
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 2px solid variables.$color-1;
+    border-radius: 10px;
+}

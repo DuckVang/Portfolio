@@ -1,0 +1,66 @@
+@use "../../styles/variables.module.scss" as variables;
+
+.footer {
+  max-height: 2.5rem;
+  font-size: 0.85rem;
+
+  display: flex;
+
+  color: variables.$text-unfocused;
+
+  border-top: 1px solid variables.$color-1;
+  & > *:not(:last-child) {
+    border-right: 1px solid variables.$color-1;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  a {
+    display: flex;
+    /* align-items: center;
+    justify-content: center;
+    height: 100%;
+    aspect-ratio: 1/1; */
+    height: 100%;
+
+    svg {
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 1/1;
+      padding: 0.25rem;
+      fill: variables.$text-unfocused;
+      &:hover {
+        fill: variables.$text-focused;
+      }
+    }
+  }
+
+  .find_me {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  .github {
+    margin-left: auto;
+    display: flex;
+    text-decoration: none;
+    margin-right: 8px;
+    &:hover {
+      span {
+        color: variables.$text-focused;
+      }
+      svg {
+        fill: variables.$text-focused;
+      }
+    }
+    span {
+      align-self: center;
+      color: variables.$text-unfocused;
+      margin-right: 5px;
+    }
+  }
+}
