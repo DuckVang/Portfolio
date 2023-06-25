@@ -12,9 +12,13 @@
   font-size: 0.85rem;
 
   .nickname {
-    margin-left: 10px;
-    min-width: 10rem;
+    padding-left: 10px;
+    min-width: variables.$left-panel;
     justify-content: left;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 0.1rem solid variables.$color-1;
   }
 
   & > * {
@@ -100,7 +104,7 @@
 
 .links {
   display: flex;
-  border-left: 0.1rem solid variables.$color-1;
+
   height: 100%;
   & > * a {
     display: flex;
