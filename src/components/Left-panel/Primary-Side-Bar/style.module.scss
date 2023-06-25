@@ -1,0 +1,56 @@
+@use "../../../styles/variables.module.scss" as variables;
+
+.primary_side_bar {
+    display: flex;
+    border-right: 0.1rem solid variables.$color-1;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+ 
+
+    & > li {
+        width: 100%;
+
+        font-size: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      
+        &:not(:first-child) {
+            h2 {
+                border-top: 0.1rem solid variables.$color-1;
+            }
+        }
+
+        h2 {
+            &::before{
+                content: "-- ";
+            }
+            width: 100%;
+            height: 2rem;
+            border-bottom: 0.1rem solid variables.$color-1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                color: variables.$text-focused;
+            }
+        }
+
+        ul {
+            width: 100%;
+            padding: 1rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 0.5rem;
+            & > li {
+                &::before{
+                    content: "> " ;
+                }
+            }
+        }
+    }
+}
