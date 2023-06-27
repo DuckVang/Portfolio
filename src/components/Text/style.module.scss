@@ -1,0 +1,15 @@
+@use "../../styles/variables.module.scss" as variables;
+
+.line {
+    counter-increment: line;
+    line-height: normal;
+
+    display: flex;
+    gap: 1rem;
+    &::before {
+        content: counter(line);
+        width: 0.1rem;
+        margin-right: 0.5rem;
+        height: 100%;
+    }
+}
