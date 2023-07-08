@@ -23,24 +23,6 @@ const Navigation = () => {
     console.log("move");
   }
 
-  const MotionLink = ({ children, link, ...props }: any) => {
-    return (
-      <li onMouseEnter={() => setSelectedLink(link.label)}>
-        <Link {...props} className={styles.link}>
-          {children}
-        </Link>
-
-        {selectedLink === link.label && (
-          <motion.div
-            transition={{ duration: 0.3, type: "spring" }}
-            layoutId="underline"
-            className={styles.underline}
-          />
-        )}
-      </li>
-    );
-  };
-
   return (
     <nav className={classnames(styles.navigation, { dropped: isDropped })}>
       <div className={styles.nickname}>
@@ -54,9 +36,18 @@ const Navigation = () => {
         <ul className={styles.links}>
           {links.map((link, index) => {
             return (
-              <MotionLink key={index} href={`/${link.route}`} link={link}>
-                {link.label}
-              </MotionLink>
+              <li key={index} onMouseDown={() => setSelectedLink(link.label)}>
+                <Link href={`/${link.route}`} className={styles.link}>
+                  {selectedLink === link.label && (
+                    <motion.span
+                      // transition={{ duration: 0.3, type: "spring" }}
+                      layoutId="underline"
+                      className={styles.underline}
+                    />
+                  )}
+                  {link.label}
+                </Link>
+              </li>
             );
           })}
         </ul>
