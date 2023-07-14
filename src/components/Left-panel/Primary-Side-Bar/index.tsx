@@ -3,45 +3,55 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   IconDefinition,
   faChevronDown,
+  faFolderClosed,
+  faChevronRight,
+  faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 interface IWorkspace {
   name: string;
   folders?: {
     icon: IconDefinition;
-    files: string;
+    name: string;
+    color?: string;
   }[];
 }
 
-const workspace: IWorkspace[] = [
-  { name: "personal life", folders: [{ icon: faChevronDown, files: "alfa" }] },
+const workspaces: IWorkspace[] = [
+  {
+    name: "personal life",
+    folders: [
+      { icon: faFolderClosed, name: "bio", color: "purple" },
+      { icon: faFolderClosed, name: "interests", color: "grey" },
+      { icon: faFolderClosed, name: "education", color: "orange" },
+    ],
+  },
   { name: "contact" },
 ];
 
 const PrimarySideBar = () => {
   return (
     <ul className={styles.primary_side_bar}>
-      <li>
-        <h2>
-          <FontAwesomeIcon icon={faChevronDown} />
-          1.workspace
-        </h2>
-        <ul>
-          <li>alfa</li>
-          <li>beta</li>
-          <li>gamma</li>
-        </ul>
-      </li>
-      <li>
-        <h2>
-          <FontAwesomeIcon icon={faChevronDown} />
-          2.workspace
-        </h2>
-        <ul>
-          <li>ichi</li>
-          <li>ni</li>
-          <li>san</li>
-        </ul>
-      </li>
+      {workspaces.map((workspace: IWorkspace, index: number) => {
+        return (
+          <li key={index}>
+            <h2>
+              <FontAwesomeIcon icon={faCaretDown} />
+              {workspace.name}
+            </h2>
+            <ul>
+              {workspace.folders?.map((folder, index) => {
+                return (
+                  <li key={index} className={styles.folder}>
+                    <FontAwesomeIcon icon={faChevronRight} />
+                    <FontAwesomeIcon icon={folder.icon} color={folder.color} />
+                    {folder.name}
+                  </li>
+                );
+              })}
+            </ul>
+          </li>
+        );
+      })}
     </ul>
   );
 };
