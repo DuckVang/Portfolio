@@ -4,12 +4,13 @@
     background-color: black;
     flex-grow: 1;
     width: 100%;
+    
 
     background-color: var(---color-1);
 }
 .content {
     width: 75%;
-    height: 80%;
+    height: 90%;
     margin: auto;
     display: flex;
     position: relative;
@@ -27,7 +28,8 @@
         .upper {
             line-height: 2.5rem;
             h1 {
-                font-size: 3rem;
+                line-height: 4rem;
+                font-size: 5rem;
             }
             h2 {
                 font-size: 1.5rem;
@@ -76,7 +78,7 @@
 }
 .light {
     position: absolute;
-    right: 60%;
+    right: 50%;
     top: 30%;
-    box-shadow: 0 0 100px 60px #0ff;
+    box-shadow: 0 0 100px 60px rgba(0, 255, 255, 0.229);
 }

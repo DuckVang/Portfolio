@@ -1,9 +1,52 @@
+@use "../../styles/variables.module.scss" as variables;
 .main {
     display: flex;
     /* visibility: hidden; */
     background-color: black;
     flex-grow: 1;
     width: 100%;
-
+   
     background-color: var(---color-1);
+}
+.window {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    // border-right: 0.1rem solid variables.$color-1;
+
+    nav {
+        height: 2rem;
+        border-bottom: 0.1rem solid variables.$color-1;
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            height: 100%;
+            & > li {
+                border-right: 0.1rem solid variables.$color-1;
+
+                padding: 0 0.8rem;
+
+                align-items: center;
+                width: 10rem;
+                display: flex;
+                justify-content: space-between;
+                &::after {
+                    content: "X";
+                }
+            }
+        }
+    }
+    main {
+        height: max-content;
+        font-size: 1rem;
+        padding: 3rem 0;
+        width: fit-content;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
