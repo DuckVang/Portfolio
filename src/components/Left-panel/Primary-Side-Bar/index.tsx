@@ -7,12 +7,14 @@ import {
   faChevronRight,
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 interface IWorkspace {
   name: string;
   folders?: {
     icon: IconDefinition;
     name: string;
     color?: string;
+    href: string;
   }[];
 }
 
@@ -20,12 +22,22 @@ const workspaces: IWorkspace[] = [
   {
     name: "personal life",
     folders: [
-      { icon: faFolderClosed, name: "bio", color: "purple" },
-      { icon: faFolderClosed, name: "interests", color: "grey" },
-      { icon: faFolderClosed, name: "education", color: "orange" },
+      { icon: faFolderClosed, name: "bio.txt", color: "purple", href: "/about/" },
+      {
+        icon: faFolderClosed,
+        name: "experience.vsg",
+        color: "grey",
+        href: "/about/experience",
+      },
+      {
+        icon: faFolderClosed,
+        name: "education.png",
+        color: "orange",
+        href: "/about/",
+      },
     ],
   },
-  { name: "contact" },
+  { name: "more" },
 ];
 
 const PrimarySideBar = () => {
@@ -44,7 +56,7 @@ const PrimarySideBar = () => {
                   <li key={index} className={styles.folder}>
                     <FontAwesomeIcon icon={faChevronRight} />
                     <FontAwesomeIcon icon={folder.icon} color={folder.color} />
-                    {folder.name}
+                    <Link href={folder.href}>{folder.name}</Link>
                   </li>
                 );
               })}
