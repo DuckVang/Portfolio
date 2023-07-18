@@ -20,7 +20,9 @@
     /* background-color: rgba(100,20,50,0.1); */
 }
 
-html {
+a {
+    text-decoration: none;
+    color:inherit
 }
 body {
     background-color: variables.$color-primary;
@@ -51,11 +53,11 @@ body {
     }
     background-image: radial-gradient(ellipse, variables.$color-primary 60%, darken(variables.$color-primary, 5%) 120%);
 
-    animation: textShadow 15s infinite;
+    // animation: textShadow 15s infinite;
     text-shadow: 0 0 3px;
 
     svg {
-        animation: svgShadow 15s infinite;
+        // animation: svgShadow 15s infinite;
         filter: drop-shadow(0 0 1.25px);
     }
 }
