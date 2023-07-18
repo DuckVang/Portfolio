@@ -15,7 +15,7 @@ export default function Projets() {
   return (
     <main className={styles.main}>
       
-pog
+      Coming soon...
 
 
     </main>

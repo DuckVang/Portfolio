@@ -2,7 +2,7 @@
 
 import LeftPanel from "@/components/Left-panel";
 import Text from "@/components/Text";
-import styles from "./page.module.scss";
+import styles from "./layout.module.scss";
 import Link from "next/link";
 import PageWrapper from "@/components/Wrapper/Page-Wrapper";
 export default function Layout({ children }: { children: React.ReactNode }) {
