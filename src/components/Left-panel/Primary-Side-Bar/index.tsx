@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 interface IWorkspace {
   name: string;
+  href: string;
   folders?: {
     icon: IconDefinition;
     name: string;
@@ -20,24 +21,31 @@ interface IWorkspace {
 
 const workspaces: IWorkspace[] = [
   {
-    name: "personal life",
+    name: "about",
+    href: "/workspace",
     folders: [
-      { icon: faFolderClosed, name: "bio.txt", color: "purple", href: "/about/" },
+      {
+        icon: faFolderClosed,
+        name: "bio.txt",
+        color: "purple",
+        href: "/workspace/",
+      },
       {
         icon: faFolderClosed,
         name: "experience.vsg",
         color: "grey",
-        href: "/about/experience",
+        href: "/workspace/experience",
       },
       {
         icon: faFolderClosed,
         name: "education.png",
         color: "orange",
-        href: "/about/",
+        href: "/workspace/",
       },
     ],
   },
-  { name: "more" },
+  { name: "projects", href:"/workspace" },
+  { name: "more", href:"/workspace" },
 ];
 
 const PrimarySideBar = () => {
