@@ -5,6 +5,7 @@ import CanvasAnimation from "@/components/Three-Animation";
 import LeftPanel from "@/components/Left-panel";
 
 import Text from "@/components/Text";
+import WindowWrapper from "@/components/Wrapper/Window-Wrapper";
 
 export default function Projets() {
   const example = `Aute qui labore proident officia mollit. Tempor incididunt duis magna
@@ -13,11 +14,11 @@ export default function Projets() {
     officia incidi`;
 
   return (
-    <main className={styles.main}>
+    <WindowWrapper className={styles.main}>
       
       Coming soon...
 
 
-    </main>
+    </WindowWrapper>
   );
 }

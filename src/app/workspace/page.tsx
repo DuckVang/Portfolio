@@ -5,6 +5,7 @@ import CanvasAnimation from "@/components/Three-Animation";
 import LeftPanel from "@/components/Left-panel";
 
 import Text from "@/components/Text";
+import WindowWrapper from "@/components/Wrapper/Window-Wrapper";
 
 export default function Bio() {
   const example = `Aute qui labore proident officia mollit. Tempor incididunt duis magna
@@ -28,8 +29,8 @@ export default function Bio() {
     Incididunt et enim nisi quis nisi fugiat labore deserunt anim consequat id sint nisi.`;
 
   return (
-    <main className={styles.main}>
+    <WindowWrapper className={styles.main}>
       <Text text={example} />
-    </main>
+    </WindowWrapper>
   );
 }
