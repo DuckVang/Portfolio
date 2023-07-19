@@ -8,7 +8,7 @@ import { LayoutGroup, motion } from "framer-motion";
 const Navigation = () => {
   const links = [
     { label: "hello", route: "" },
-    { label: "about", route: "about" },
+    { label: "about", route: "workspace" },
     { label: "projects", route: "" },
     { label: "more", route: "" },
     { label: "contacts", route: "" },
