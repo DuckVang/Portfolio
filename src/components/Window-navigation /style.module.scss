@@ -1,0 +1,25 @@
+@use "../../styles/variables.module.scss" as variables;
+
+.navigation {
+    min-height: 2rem;
+    border-bottom: 0.1rem solid variables.$color-1;
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        height: 100%;
+        & > li {
+            border-right: 0.1rem solid variables.$color-1;
+
+            padding: 0 0.8rem;
+
+            align-items: center;
+            width: 10rem;
+            display: flex;
+            justify-content: space-between;
+            &::after {
+                content: "X";
+            }
+        }
+    }
+}
