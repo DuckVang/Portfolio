@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import  Providers  from "./providers";
 config.autoAddCss = false;
 
 const fira = Fira_Code({ subsets: ["latin"] });
@@ -23,12 +24,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={fira.className}>
-        <div className="scanline"/>
-        <div className="wrapper">
-          <Navigation />
-          {children}
-          <Footer />
-        </div>
+        <Providers>
+          <div className="scanline" />
+          <div className="wrapper">
+            <Navigation />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );
