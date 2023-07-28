@@ -8,9 +8,7 @@ export default function Home() {
       <div className={styles.content}>
         <div className={styles.left}>
           <div className={styles.upper}>
-            <h3>Hi all. I am</h3>
-            <h1>Nguyen Duc&nbsp;Minh</h1>
-            <h2>Full-stack developer</h2>
+            
           </div>
 
           <div className={styles.lower}>
