@@ -1,8 +1,8 @@
 $dark-theme: true !default;
 
 @if $dark-theme {
-    // $primary-color: darken($-color, 60%);
-    // $accent-color: lighten($accent-color, 60%);
+    // $primary-color: darken($-color 60%);
+    // $accent-color: lighten($accent-color 60%);
 }
 
 $color-primary: #011727;
@@ -10,11 +10,15 @@ $color-1: #1e2d3d;
 $text-unfocused: #9fadbc;
 $text-focused: #ffffff;
 
-
 $left-panel: 15rem;
 
 $font-default: 0.85rem;
 //for JS
-:export{
 
-}
+$mobileS: 320px;
+$mobileM: 375px;
+$mobileL: 425px;
+$tablet: 768px;
+$laptop: 1024px;
+$laptopL: 1440px;
+$desktop: 2560px;
